@@ -1,32 +1,38 @@
+# vim: ft=gitconfig
+
 [user]
-	name = Zhang Erning
-	email = zhang@erning.com
+    name = Zhang Erning
+    email = zhang@erning.com
 
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
-        ui = true
-        pager = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
 
 [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
 [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [core]
-	editor = mvim -f
+    editor = mvim -f
 
-# vim: ft=gitconfig
+[diff]
+    tool = opendiff
+
+[merge]
+    tool = opendiff
