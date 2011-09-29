@@ -19,15 +19,16 @@ set noswapfile
 syntax on
 
 " color schema
-set background=dark
 if has("gui_running")
-    color peaksea 
-    set guifont=Menlo:h16
+    set background=light
+    color solarized
+    set guifont=Menlo:h14
     "set guifont=Anonymous\ Pro:h16
     "set guioptions-=T
 else
-    color solarized
     "color ron
+    set background=dark
+    color peaksea
 endif
 
 " incremental search, <C-H> to toggle search highlight
