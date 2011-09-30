@@ -19,14 +19,17 @@ set noswapfile
 syntax on
 
 " color schema
-set background=dark
 if has("gui_running")
-    color peaksea 
+    set background=light
+    color solarized
     set guifont=Menlo:h16
     "set guifont=Anonymous\ Pro:h16
     "set guioptions-=T
+    map <C-X><C-L> :set background=light<CR> :color solarized<CR>
+    map <C-X><C-D> :set background=dark<CR> :color peaksea<CR>
 else
-    color solarized
+    color peaksea 
+    set background=dark
     "color ron
 endif
 
@@ -52,11 +55,8 @@ set smartindent
 set wrap
 
 " line number
+set nu
 map <C-N><C-N> :set nu!<CR>
-
-" background
-map <C-X><C-L> :set background=light<CR> :color solarized<CR>
-map <C-X><C-D> :set background=dark<CR> :color peaksea<CR>
 
 " invisible character
 nmap <leader>l :set list!<CR>
