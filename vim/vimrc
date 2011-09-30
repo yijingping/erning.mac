@@ -28,9 +28,8 @@ if has("gui_running")
     map <C-X><C-L> :set background=light<CR> :color solarized<CR>
     map <C-X><C-D> :set background=dark<CR> :color peaksea<CR>
 else
-    color peaksea 
-    set background=dark
-    "color ron
+    set background=light
+    color ron
 endif
 
 " incremental search, <C-H> to toggle search highlight
