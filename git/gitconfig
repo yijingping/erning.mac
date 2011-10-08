@@ -32,7 +32,14 @@
     editor = mvim -f
 
 [diff]
-    tool = opendiff
+    tool = diffmerge
+
+[difftool "diffmerge"]
+    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 
 [merge]
-    tool = opendiff
+    tool = diffmerge
+
+[mergetool "diffmerge"]
+    cmd = diffmerge --merge --result=\"$MERGED\"\n  \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    trustexitcode = false
