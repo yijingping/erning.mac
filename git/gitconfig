@@ -30,16 +30,17 @@
 
 [core]
     editor = mvim -f
+    excludesfile = /Users/erning/.gitignore_global
 
 [diff]
-    tool = diffmerge
-
-[difftool "diffmerge"]
-    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+    tool = opendiff
 
 [merge]
-    tool = diffmerge
+    tool = opendiff
 
-[mergetool "diffmerge"]
-    cmd = diffmerge --merge --result=\"$MERGED\"\n  \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-    trustexitcode = false
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
