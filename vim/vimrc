@@ -72,3 +72,12 @@ endfunction
 " Marked.app
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 
+
+" InputMethod problem
+set noimd
+if has("gui_running")
+    set imdisable
+    "    set imactivatekey=D-space
+    inoremap <ESC> <ESC>:set iminsert=1<CR>
+endif
+
