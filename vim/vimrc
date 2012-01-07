@@ -62,12 +62,14 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸-,eol:¬
 
 " Format the statusline
-set laststatus=2
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/erning/', "~/", "g")
-    return curdir
-endfunction
+if has("gui_running")
+    set laststatus=2
+    set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+    function! CurDir()
+        let curdir = substitute(getcwd(), '^/Users/erning', "~", "g")
+        return curdir
+    endfunction
+endif
 
 " Marked.app
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
