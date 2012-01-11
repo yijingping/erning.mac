@@ -42,10 +42,10 @@
     excludesfile = /Users/erning/.gitignore_global
 
 [diff]
-    tool = opendiff
+    tool = p4merge
 
 [merge]
-    tool = opendiff
+    tool = p4merge
 
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
