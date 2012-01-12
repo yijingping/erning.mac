@@ -42,10 +42,16 @@
     excludesfile = /Users/erning/.gitignore_global
 
 [diff]
-    tool = p4merge
+    tool = kaleidoscope
 
 [merge]
-    tool = p4merge
+    tool = araxis
+
+[difftool]
+    prompt = false
+
+[difftool "kaleidoscope"]
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 
 [difftool "sourcetree"]
     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -54,3 +60,4 @@
 [mergetool "sourcetree"]
     cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
     trustExitCode = true
+
