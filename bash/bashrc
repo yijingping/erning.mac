@@ -26,3 +26,7 @@ fi
 # git-exec
 #export GIT_EXEC_PATH="$HOME/apps/gitexec:$(git --exec-path)"
 
+# bash_completion
+if [ -f "/opt/local/etc/bash_completion.d/git" ] ; then
+    source /opt/local/etc/bash_completion.d/git
+fi
