@@ -118,7 +118,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # pythonbrew
 if [ -f "$HOME/.pythonbrew/etc/bashrc" ] ; then
@@ -137,3 +137,4 @@ fi
 if [ -f "/opt/local/etc/bash_completion.d/git" ] ; then
     source /opt/local/etc/bash_completion.d/git
 fi
+
