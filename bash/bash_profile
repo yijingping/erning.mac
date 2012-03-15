@@ -31,7 +31,8 @@ pathappend () {
 #pathappend /usr/local/bin
 
 # MacPorts
-pathprepend /opt/local/bin:/opt/local/sbin
+#switching to Homebrew
+#pathprepend /opt/local/bin:/opt/local/sbin
 
 
 # Utilities
