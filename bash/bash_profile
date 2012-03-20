@@ -1,34 +1,30 @@
-
 # Functions to help us manage paths.  Second argument is the name of the
 # path variable to be modified (default: PATH)
 pathremove () {
-        local IFS=':'
-        local NEWPATH
-        local DIR
-        local PATHVARIABLE=${2:-PATH}
-        for DIR in ${!PATHVARIABLE} ; do
-                if [ "$DIR" != "$1" ] ; then
-                  NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
-                fi
-        done
-        export $PATHVARIABLE="$NEWPATH"
+    local IFS=':'
+    local NEWPATH
+    local DIR
+    local PATHVARIABLE=${2:-PATH}
+    for DIR in ${!PATHVARIABLE} ; do
+        if [ "$DIR" != "$1" ] ; then
+            NEWPATH=${NEWPATH:+$NEWPATH:}$DIR
+        fi
+    done
+    export $PATHVARIABLE="$NEWPATH"
 }
 
 pathprepend () {
-        pathremove $1 $2
-        local PATHVARIABLE=${2:-PATH}
-        export $PATHVARIABLE="$1${!PATHVARIABLE:+:${!PATHVARIABLE}}"
+    pathremove $1 $2
+    local PATHVARIABLE=${2:-PATH}
+    export $PATHVARIABLE="$1${!PATHVARIABLE:+:${!PATHVARIABLE}}"
 }
 
 pathappend () {
-        pathremove $1 $2
-        local PATHVARIABLE=${2:-PATH}
-        export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
+    pathremove $1 $2
+    local PATHVARIABLE=${2:-PATH}
+    export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
 }
 
-
-# MacGPG
-pathappend /usr/local/bin
 
 # MacPorts
 pathprepend /opt/local/bin:/opt/local/sbin
@@ -40,11 +36,11 @@ export ANT_HOME="${HOME}/apps/apache-ant"
 export M2_HOME="${HOME}/apps/apache-maven"
 
 export GOROOT="${HOME}/apps/go"
-export SCALA_HOME="${HOME}/apps/scala"
-export GROOVY_HOME="${HOME}/apps/groovy"
+#export SCALA_HOME="${HOME}/apps/scala"
+#export GROOVY_HOME="${HOME}/apps/groovy"
 
 #pathprepend "${GROOVY_HOME}/bin"
-pathprepend "${SCALA_HOME}/bin"
+#pathprepend "${SCALA_HOME}/bin"
 pathprepend "${GOROOT}/bin"
 pathprepend "${M2_HOME}/bin"
 pathprepend "${ANT_HOME}/bin"
