@@ -27,7 +27,7 @@ pathappend () {
 
 
 # MacPorts
-pathprepend /opt/local/bin:/opt/local/sbin
+#pathprepend /opt/local/bin:/opt/local/sbin
 
 
 # Utilities
@@ -35,13 +35,13 @@ pathprepend /opt/local/bin:/opt/local/sbin
 export ANT_HOME="${HOME}/apps/apache-ant"
 export M2_HOME="${HOME}/apps/apache-maven"
 
-export GOROOT="${HOME}/apps/go"
+#export GOROOT="${HOME}/apps/go"
 #export SCALA_HOME="${HOME}/apps/scala"
 #export GROOVY_HOME="${HOME}/apps/groovy"
 
 #pathprepend "${GROOVY_HOME}/bin"
 #pathprepend "${SCALA_HOME}/bin"
-pathprepend "${GOROOT}/bin"
+#pathprepend "${GOROOT}/bin"
 pathprepend "${M2_HOME}/bin"
 pathprepend "${ANT_HOME}/bin"
 #pathprepend "${ANDROID_SDK_HOME}/bin"

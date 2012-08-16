@@ -7,11 +7,15 @@
 [user]
     name = Zhang Erning
     email = zhang@erning.com
+    signingkey = 5ABFAE18
 
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     ci = commit
     co = checkout
+    st = status -sb
+    track = checkout -t
+    unstage = reset HEAD --
 
 [color]
     diff = auto
