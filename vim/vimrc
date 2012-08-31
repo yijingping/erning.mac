@@ -20,6 +20,7 @@ syntax on
 
 " color schema
 if has("gui_running")
+    set guioptions=-t
     set background=light
     color solarized
     set guifont=Menlo:h16
@@ -101,3 +102,8 @@ if has("gui_running")
     inoremap <ESC> <ESC>:set iminsert=1<CR>
 endif
 
+" identation emulate
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
