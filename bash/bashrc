@@ -31,9 +31,9 @@ fi
 #fi
 
 # phpbrew
-#if [ -f "$HOME/.phpbrew/bashrc" ] ; then
-#    source $HOME/.phpbrew/bashrc
-#fi
+if [ -f "$HOME/.phpbrew/bashrc" ] ; then
+    source $HOME/.phpbrew/bashrc
+fi
 
 # git-ps1
 if [ -x "$HOME/bin/git-ps1.sh" ]; then
