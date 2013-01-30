@@ -70,3 +70,5 @@ fi
 # Now to clean up
 unset pathremove pathprepend pathappend
 
+# GPG always wants to know what TTY it's running on. 
+export GPG_TTY=`tty`
