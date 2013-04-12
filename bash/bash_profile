@@ -26,8 +26,8 @@ pathappend () {
 }
 
 
-# MacPorts
-#pathprepend /opt/local/bin:/opt/local/sbin
+# npm from homebrew
+pathprepend "/usr/local/share/npm/bin"
 
 
 # Utilities
