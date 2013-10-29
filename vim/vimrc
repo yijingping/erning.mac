@@ -107,3 +107,34 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+" Relative number {n}j {n}k
+set relativenumber
+au FocusLost * :set number
+au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+function! NumberToggle()
+    set number
+    set relativenumber!
+endfunc
+"nnoremap <C-n><C-r> :call NumberToggle()<cr>
+map <C-n><C-r> :call NumberToggle()<cr>
+
+"
+set scrolloff=7
+
+"
+if has("gui_running")
+    set cursorline
+    set cursorcolumn
+endif
+
+
+" w!! write as root
+cmap w!! %!sudo tee > /dev/null %
+
+"
+set t_ti= t_te=
+
