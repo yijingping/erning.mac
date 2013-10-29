@@ -47,7 +47,7 @@ pathprepend "${ANT_HOME}/bin"
 #pathprepend "${ANDROID_SDK_HOME}/bin"
 
 # golang
-export GOPATH="${HOME}/apps/gopath"
+export GOPATH="${HOME}/.gocode"
 pathprepend "${GOPATH}/bin"
 
 # ~/bin
