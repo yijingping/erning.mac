@@ -16,6 +16,7 @@
     st = status -sb
     track = checkout -t
     unstage = reset HEAD --
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
 
 [color]
     diff = auto
@@ -45,25 +46,24 @@
     editor = mvim -f
     excludesfile = /Users/erning/.gitignore_global
 
-[diff]
-    tool = kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
-[merge]
-    tool = araxis
+[diff]
+    tool = Kaleidoscope
 
 [difftool]
     prompt = false
 
-[difftool "kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
-
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
     trustExitCode = true
+
+[mergetool]
+    prompt = false
+
+[merge]
+	tool = Kaleidoscope
 
 [push]
 	default = nothing
