@@ -86,7 +86,9 @@ set matchpairs=(:),{:},[:],<:>
 set whichwrap =b,s,<,>,[,]
 
 " 高亮限制行长度
-set colorcolumn=80
+if v:version >= 730
+  set colorcolumn=80
+endif
 
 "配色
 color desertedocean

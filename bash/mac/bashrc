@@ -8,3 +8,6 @@ export PATH=/usr/local/bin:$PATH
 alias goagent="sudo python3.4 /Users/yijingping/Dropbox/goagent-goagent-a3d9e4d/local/proxy.py > /dev/null & "
 alias goaliyun="ssh yijingping@115.28.82.107"
 alias godev="ssh 125.39.25.207" 
+
+alias ls="ls -G" 
+alias grep="grep --color" 
