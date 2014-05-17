@@ -5,7 +5,7 @@ export PATH
 export PATH=/usr/local/bin:$PATH
 
 # alias 
-alias goagent="sudo python3.4 /Users/yijingping/Dropbox/goagent-goagent-a3d9e4d/local/proxy.py > /dev/null & "
+alias goagent="sudo python3.4 /Users/yijingping/Dropbox/goagent-goagent-a3d9e4d/local/proxy.py > /dev/null"
 alias goaliyun="ssh yijingping@115.28.82.107"
 alias godev="ssh 125.39.25.207" 
 

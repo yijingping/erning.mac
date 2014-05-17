@@ -4,6 +4,10 @@
 if [ -f /etc/bashrc ]; then 
     . /etc/bashrc 
 fi 
+
+# set env for virtualenvwapper 
+export WORKON_HOME=~/envs
+source /usr/local/bin/virtualenvwrapper.sh
      
 # User specific aliases and functions 
 alias ls="ls --color" 
