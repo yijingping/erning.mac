@@ -8,7 +8,23 @@ fi
 # set env for virtualenvwapper 
 export WORKON_HOME=~/envs
 source /usr/local/bin/virtualenvwrapper.sh
-     
+
+# alians shortcut     
+# alias goagent="python3 /home/yijingping/Dropbox/goagent-goagent-a3d9e4d/local/proxy.py &> /dev/null &"
+alias godev="ssh yijingping@125.39.25.207" 
+alias goaliyun="ssh yijingping@115.28.82.107"
+alias sshdev="ssh yijingping@10.2.134.27"
+alias sshtest="ssh yijingping@10.2.134.238"
+alias ssh178="ssh jingping.yi@10.19.1.178"
+
+alias runserver="python manage.py runserver 0.0.0.0:8001"
+alias runserver2="python manage.py runserver 0.0.0.0:8002"
+alias runserver3="python manage.py runserver 0.0.0.0:8002"
+
+function svndiff () { svn diff $@ | colordiff | less -R; }
+export SVN_EDITOR=vim
+
+
 # User specific aliases and functions 
 alias ls="ls --color" 
 alias grep="grep --color" 

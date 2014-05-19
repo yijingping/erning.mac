@@ -4,10 +4,22 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
 export PATH=/usr/local/bin:$PATH
 
-# alias 
+# alias shortcut
 alias goagent="sudo python3.4 /Users/yijingping/Dropbox/goagent-goagent-a3d9e4d/local/proxy.py > /dev/null"
 alias goaliyun="ssh yijingping@115.28.82.107"
 alias godev="ssh 125.39.25.207" 
+alias sshdev="ssh 10.2.134.27"
+alias sshtest="ssh 10.2.134.238"
+alias ssh178="ssh jingping.yi@10.19.1.178"
+alias runserver="python manage.py runserver 0.0.0.0:8001"
+alias runserver2="python manage.py runserver 0.0.0.0:8002"
+alias runserver3="python manage.py runserver 0.0.0.0:8003"
 
+
+# alians command
 alias ls="ls -G" 
 alias grep="grep --color" 
+
+# for svn
+function svndiff () { svn diff $@ | colordiff | less -R; }
+export SVN_EDITOR=vim
