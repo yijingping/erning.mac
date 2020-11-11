@@ -17,7 +17,7 @@ Bundle 'indentpython.vim'
 Bundle 'python.vim'
 Bundle 'vim-autopep8'
 " 提供实时检查python代码语法的功能
-Bundle 'pyflakes.vim'
+" Bundle 'pyflakes.vim'
 Bundle 'django.vim'
 " 提供js语法高亮，和智能缩进(需要安装IndentAnything插件)
 Bundle 'javascript.vim'

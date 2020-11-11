@@ -1,0 +1,6 @@
+依次安装以下软件：
+
+* Pyenv-installer：安装pyenv的工具
+* Pyenv：管理python版本
+* Pipenv：管理依赖包
+* Pyenv-virtualenv：管理虚拟环境
